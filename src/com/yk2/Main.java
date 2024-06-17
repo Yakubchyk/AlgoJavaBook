@@ -28,6 +28,10 @@ public class Main {
             for (int j = i; j < element - 1; j++) {
                 arr[j] = arr[j + 1];
                 element--;
+kjhjhpjhöjh
+        poj+oj
+                kojnüo
+                        ojh
 
             }
 
