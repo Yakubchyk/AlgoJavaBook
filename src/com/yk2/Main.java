@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
         int key;
         int[] arr = new int[10];
         arr[0] = 12;
@@ -16,26 +17,31 @@ public class Main {
         arr[7] = 51;
         arr[8] = 21;
         arr[9] = 13;
-        System.out.println(Arrays.toString(arr));
+
+        System.out.println("Original array: " + Arrays.toString(arr));
 
         // Удаление из массива
         key = 13;
-        int element = arr.length;
-        for (int i = 0; i < element; i++) {
-            if (arr[i] == key) {
-                break;
-            }
-            for (int j = i; j < element - 1; j++) {
-                arr[j] = arr[j + 1];
-                element--;
-kjhjhpjhöjh
-        poj+oj
-                kojnüo
-                        ojh
+        int count = 0;
 
+        // Считаем количество вхождений ключа
+        for (int value : arr) {
+            if (value == key) {
+                count++;
             }
-
         }
 
+        // Создаем новый массив с учетом количества удаляемых элементов
+        int[] arr2 = new int[arr.length - count];
+        int index = 0;
+
+        // Заполняем новый массив
+        for (int value : arr) {
+            if (value != key) {
+                arr2[index++] = value;
+            }
+        }
+
+        System.out.println("Modified array: " + Arrays.toString(arr2));
     }
 }
